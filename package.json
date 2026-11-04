@@ -1,0 +1,10 @@
+{
+  "name": "pocket-utilities",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": "Nalkyrrr",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test" }
+}
