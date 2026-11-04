@@ -6,7 +6,7 @@ Run a tool with `node FILE.js ARGUMENTS`. Quote text containing spaces. Every to
 
 | Tool | Example | Purpose |
 | --- | --- | --- |
-| slugify | `node slugify.js "Cr\u00e8me & Tea"` | ASCII URL slug with accent removal |
+| slugify | `node slugify.js "Creme & Tea"` | ASCII URL slug with accent removal |
 | title-case | `node title-case.js "a small title"` | Capitalize each word; no editorial title rules |
 | word-frequency | `node word-frequency.js "tea tea coffee"` | Case-insensitive Unicode word counts |
 | unique-lines | `node unique-lines.js "TEXT"` | Remove repeated lines, keeping first occurrences |
@@ -29,5 +29,7 @@ Run a tool with `node FILE.js ARGUMENTS`. Quote text containing spaces. Every to
 Text tools accept a single argument, including multiline strings. Line tools normalize CR, LF, and CRLF to LF and preserve distinct empty lines according to the operation. Slugs keep ASCII letters and digits; non-Latin scripts may produce empty slugs. Word counting is a simple token rule, not linguistic segmentation. Numeric tools use JavaScript numbers unless exact integer output is explicitly documented above.
 
 Functions can also be imported: `import { slugify } from './slugify.js'`. Importing a module produces no output. Run the included checks with `npm test` or `node --test`. Tools do not modify files.
+
+An additional PowerShell tool, `./system-summary.ps1`, prints a JSON report with operating system, CPU architecture, logical processor count, and PowerShell version. It works in PowerShell 7 and makes no network requests. It does not report machine names or user identifiers. Run it in PowerShell with `./system-summary.ps1`.
 
 MIT license. Copyright (c) 2026 Nalkyrrr.
